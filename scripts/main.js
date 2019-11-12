@@ -12,6 +12,13 @@ function initBuyBtns() {
     }
 }
 function buyProduct() {
+    var prod = getProduct();
+    saveProductToCart(prod);
+}
+/**
+ * Get the product object for the currently selected product.
+ */
+function getProduct() {
     var currBuyBtn = this;
     var currProdDiv = currBuyBtn.parentElement;
     var prod = new Product();
@@ -20,6 +27,9 @@ function buyProduct() {
     var price = currProdDiv.querySelector(".price").innerHTML;
     price = price.replace("$", "");
     prod.price = parseFloat(price);
+    return prod;
+}
+function saveProductToCart(p) {
 }
 /**Represents a single shopping cart item.*/
 var Product = /** @class */ (function () {
