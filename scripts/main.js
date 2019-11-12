@@ -12,7 +12,14 @@ function initBuyBtns() {
     }
 }
 function buyProduct() {
-    alert("You clicked buy");
+    var currBuyBtn = this;
+    var currProdDiv = currBuyBtn.parentElement;
+    var prod = new Product();
+    prod.name = currProdDiv.querySelector(".title").innerHTML;
+    prod.description = currProdDiv.querySelector(".description").innerHTML;
+    var price = currProdDiv.querySelector(".price").innerHTML;
+    price = price.replace("$", "");
+    prod.price = parseFloat(price);
 }
 /**Represents a single shopping cart item.*/
 var Product = /** @class */ (function () {

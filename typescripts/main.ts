@@ -15,5 +15,18 @@ function initBuyBtns() {
 }
 
 function buyProduct() {
-    alert("You clicked buy");
+    let currBuyBtn = <HTMLElement>this;
+    let currProdDiv = currBuyBtn.parentElement;
+
+    
+    let prod = new Product();
+
+    prod.name = currProdDiv.querySelector(".title").innerHTML;
+
+    prod.description = currProdDiv.querySelector(".description").innerHTML;
+
+    let price = currProdDiv.querySelector(".price").innerHTML;
+    price = price.replace("$", "");
+    prod.price =  parseFloat(price);
+
 }
