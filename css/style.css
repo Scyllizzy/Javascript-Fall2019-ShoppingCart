@@ -4,28 +4,48 @@ div#shopping-cart {
     right: 1em;
 }
 
+div.title {
+    font-size: xx-large;
+    font-family: 'Alata', sans-serif;
+}
+
+div.description {
+    font-family: 'Public Sans', sans-serif;
+}
+
 div.product {
     border: 1px solid black;
+    border-radius: .5em;
     position: relative;
     width: 75%;
     padding: .5em;
     overflow: hidden;
+    margin: .5em;
 }
 
 div.product > img {
     float: left;
     margin: .25em;
+    border: 3px solid black;
 }
 
 div.buy, div.price {
     position: absolute;
-    border: 1px solid green;
     right: 1em;
-    padding: .25em;
+    padding: .3em;
 }
 
 div.buy {
+    border: 1.5px solid rgb(241, 203, 98);
+    border-radius: .25em;
     top: 1em; 
+    width: 3em;
+    text-align: center;
+}
+
+div.buy:hover {
+    cursor: pointer;
+    background-color: antiquewhite;
 }
 
 div.price {
